@@ -1,6 +1,13 @@
 pipeline {
 agent any
 stages {
+stage ('Switch directory') {
+steps {
+bat'D:'
+bat'cd jenkins'
+bat'cd testNG'
+}
+}
 stage ('Cleaning Stage') {
 steps {
 bat'mvn clean'
